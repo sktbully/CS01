@@ -1,0 +1,29 @@
+﻿C#企业级开发技术练习1答题卡
+
+班级：信管1班     
+姓名：邱梓龙     
+学号：20190307128     
+
+注：请将答案放置在序号下方。*/
+
+（一）
+
+25Days later:
+string ds="2020/2/20 10:10:20";
+DateTime dt= DateTime.Parse(ds);
+dt=dt.AddDays(25).AddHours(8);
+Console.WriteLine($"{dt.Year}年{dt.Month}月{dt.Day}日 {dt.TimeOfDay}");
+
+25Days ago:
+string ds="2020/2/20 10:10:20";
+DateTime dt= DateTime.Parse(ds);
+dt=dt.MinusDays(25).MinusHours(8);
+Console.WriteLine($"{dt.Year}年{dt.Month}月{dt.Day}日 {dt.TimeOfDay}");
+
+（二）
+
+int?[ ] arr = { 3, 7, null, 2, 5 };
+int? s = 0;
+foreach (int? a in arr)
+           s *= a??0;
+Console.WriteLine(s);
